@@ -711,7 +711,7 @@ if __name__ == '__main__':
     repeats = [int(i.strip()) for i in args.repeats.split(",")]
     print(f"Executing runs {repeats} for log {args.log} with max. trials of {int(args.maxTrials)}")
     
-    abs_path = ".."
+    abs_path = "."
     CSV_LOGS_DIR = f"{abs_path}/data/main/logs/"
     XES_LOG_DIR = f"{abs_path}/data/main/xes_logs/"
     LPMS_DIR = f"{abs_path}/{args.folder}/lpms/"
