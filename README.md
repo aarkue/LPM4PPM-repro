@@ -1,6 +1,6 @@
 # LPM4PPM - Reproduction
 
-During the Machine Learning Applications in Process Mining Seminar I will assess the paper titled Encoding High-Level Control-Flow Construct Information for Process Outcome Prediction, published by Vazifehdoostirani et al. in 2022.
+During the _Machine Learning Applications in Process Mining_ Seminar I will assess the paper titled __Encoding High-Level Control-Flow Construct Information for Process Outcome Prediction__, published by Vazifehdoostirani et al. in 2022.
 ## Structure
 The main approach implementation is in the file `AllInOne.py`. The visualization scripts are located in the `vis/` folder, while the data and results are stored in `data/`.
 
