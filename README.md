@@ -3,6 +3,7 @@
 During the _Machine Learning Applications in Process Mining_ Seminar I will assess the paper titled __Encoding High-Level Control-Flow Construct Information for Process Outcome Prediction__, published by Vazifehdoostirani et al. in 2022.
 ## Structure
 The main approach implementation is in the file `AllInOne.py`. The visualization scripts are located in the `vis/` folder, while the data and results are stored in `data/`.
+Software dependencies are listed in `requirements.txt`.
 
 The `data/` directory contains two folders, the folder `main` where the used event logs and results for the main evaluation are stored.
 The `imf-alternative` folder contains the data and results for the alternative process model discovery technique mentioned in the report.
