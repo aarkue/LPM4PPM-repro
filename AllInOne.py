@@ -714,9 +714,9 @@ if __name__ == '__main__':
     abs_path = "."
     CSV_LOGS_DIR = f"{abs_path}/data/main/logs/"
     XES_LOG_DIR = f"{abs_path}/data/main/xes_logs/"
-    LPMS_DIR = f"{abs_path}/{args.folder}/lpms/"
-    CSV_PROCESSED_DIR = f"{abs_path}/{args.folder}/processed/"
-    RES_DIR = f"{abs_path}/{args.folder}/results/"
+    LPMS_DIR = f"{abs_path}/{args.folder}/data/lpms/"
+    CSV_PROCESSED_DIR = f"{abs_path}/{args.folder}/data/processed/"
+    RES_DIR = f"{abs_path}/{args.folder}/data/results/"
     for p in [LPMS_DIR, CSV_PROCESSED_DIR, XES_LOG_DIR, RES_DIR]:
         create_dir_if_needed(p)
         if args.log is None:
