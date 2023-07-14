@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="imdf_net_1688939030.5581512" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>imdf_net_1688939030.5581512</text>
+    </name>
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="p_5">
+        <name>
+          <text>p_5</text>
+        </name>
+      </place>
+      <place id="p_6">
+        <name>
+          <text>p_6</text>
+        </name>
+      </place>
+      <transition id="skip_4">
+        <name>
+          <text>skip_4</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="09d8b8ee-de7b-4983-8020-5fb1ac65d84f"/>
+      </transition>
+      <transition id="d0472fba-8181-42a4-aa0b-1269fe3deafe">
+        <name>
+          <text>AC370401</text>
+        </name>
+      </transition>
+      <transition id="3e980514-ee76-4aa1-bfa2-a1e191eedb93">
+        <name>
+          <text>AC710170</text>
+        </name>
+      </transition>
+      <transition id="skip_5">
+        <name>
+          <text>skip_5</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="f036b8f3-dd4f-461e-abe5-2e6e4c17b8c2"/>
+      </transition>
+      <arc id="23217734356512" source="p_5" target="3e980514-ee76-4aa1-bfa2-a1e191eedb93"/>
+      <arc id="23217734356704" source="3e980514-ee76-4aa1-bfa2-a1e191eedb93" target="p_6"/>
+      <arc id="23217734422976" source="p_6" target="skip_4"/>
+      <arc id="23217734423648" source="skip_4" target="p_5"/>
+      <arc id="23217734423744" source="skip_5" target="sink"/>
+      <arc id="23217734423840" source="d0472fba-8181-42a4-aa0b-1269fe3deafe" target="p_5"/>
+      <arc id="23217734462576" source="source" target="d0472fba-8181-42a4-aa0b-1269fe3deafe"/>
+      <arc id="23217734423312" source="p_6" target="skip_5"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

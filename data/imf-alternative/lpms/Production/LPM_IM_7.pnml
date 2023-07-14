@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="imdf_net_1688976440.3902402" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>imdf_net_1688976440.3902402</text>
+    </name>
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="p_5">
+        <name>
+          <text>p_5</text>
+        </name>
+      </place>
+      <place id="p_6">
+        <name>
+          <text>p_6</text>
+        </name>
+      </place>
+      <transition id="c73ed8d4-5877-4d7f-b627-1e7f56d3524e">
+        <name>
+          <text>Final Inspection Q.C.</text>
+        </name>
+      </transition>
+      <transition id="skip_5">
+        <name>
+          <text>skip_5</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="ef2b4290-198d-4f50-abaa-f838c89d51bc"/>
+      </transition>
+      <transition id="d448ec7e-efbb-4e65-bb1f-77fad1cbc267">
+        <name>
+          <text>Lapping - Machine 1</text>
+        </name>
+      </transition>
+      <transition id="skip_4">
+        <name>
+          <text>skip_4</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="e46e4c3f-7f69-42d1-8502-0df39db29772"/>
+      </transition>
+      <arc id="22449934635456" source="skip_5" target="sink"/>
+      <arc id="22449934757648" source="source" target="d448ec7e-efbb-4e65-bb1f-77fad1cbc267"/>
+      <arc id="22449934035696" source="p_5" target="c73ed8d4-5877-4d7f-b627-1e7f56d3524e"/>
+      <arc id="22449934035312" source="c73ed8d4-5877-4d7f-b627-1e7f56d3524e" target="p_6"/>
+      <arc id="22449934202480" source="p_6" target="skip_4"/>
+      <arc id="22449934204496" source="p_6" target="skip_5"/>
+      <arc id="22449934638768" source="skip_4" target="p_5"/>
+      <arc id="22449934638000" source="d448ec7e-efbb-4e65-bb1f-77fad1cbc267" target="p_5"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

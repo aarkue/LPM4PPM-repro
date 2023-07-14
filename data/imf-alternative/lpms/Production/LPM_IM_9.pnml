@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="imdf_net_1688976440.4633157" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>imdf_net_1688976440.4633157</text>
+    </name>
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="p_6">
+        <name>
+          <text>p_6</text>
+        </name>
+      </place>
+      <place id="p_5">
+        <name>
+          <text>p_5</text>
+        </name>
+      </place>
+      <transition id="141e6245-fa2c-4700-ac82-d6dd67292caa">
+        <name>
+          <text>Round Grinding - Manual</text>
+        </name>
+      </transition>
+      <transition id="skip_5">
+        <name>
+          <text>skip_5</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="b746bca6-e80d-4eec-a35e-ee93927209fc"/>
+      </transition>
+      <transition id="skip_6">
+        <name>
+          <text>skip_6</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="ccc03a33-5521-4d4d-8f97-99505480458d"/>
+      </transition>
+      <transition id="tau_1">
+        <name>
+          <text>tau_1</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="80de1aa5-ed52-4c80-b301-3e4df36d52f8"/>
+      </transition>
+      <arc id="22449934558592" source="source" target="tau_1"/>
+      <arc id="22449934807296" source="p_6" target="skip_5"/>
+      <arc id="22449934809120" source="p_6" target="skip_6"/>
+      <arc id="22449934810560" source="skip_6" target="sink"/>
+      <arc id="22449934657712" source="p_5" target="141e6245-fa2c-4700-ac82-d6dd67292caa"/>
+      <arc id="22449934659152" source="141e6245-fa2c-4700-ac82-d6dd67292caa" target="p_6"/>
+      <arc id="22449934808208" source="skip_5" target="p_5"/>
+      <arc id="22449934808688" source="tau_1" target="p_5"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

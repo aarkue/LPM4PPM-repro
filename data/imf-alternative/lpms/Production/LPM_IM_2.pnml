@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="imdf_net_1688976440.4201388" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>imdf_net_1688976440.4201388</text>
+    </name>
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="p_4">
+        <name>
+          <text>p_4</text>
+        </name>
+      </place>
+      <place id="p_3">
+        <name>
+          <text>p_3</text>
+        </name>
+      </place>
+      <transition id="tau_1">
+        <name>
+          <text>tau_1</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="48c12e1a-d7f7-4376-8bfa-4718b6549ff9"/>
+      </transition>
+      <transition id="968901aa-0009-4acb-8c4a-5e38a13be895">
+        <name>
+          <text>Turning &amp; Milling Q.C.</text>
+        </name>
+      </transition>
+      <transition id="cd40896b-4762-40a7-935f-34332052193d">
+        <name>
+          <text>Final Inspection Q.C.</text>
+        </name>
+      </transition>
+      <transition id="tau_2">
+        <name>
+          <text>tau_2</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="e8e54df4-98af-4430-b4b4-f757d41c5b32"/>
+      </transition>
+      <arc id="22449934810368" source="tau_1" target="p_3"/>
+      <arc id="22449934922272" source="p_3" target="968901aa-0009-4acb-8c4a-5e38a13be895"/>
+      <arc id="22449934922464" source="968901aa-0009-4acb-8c4a-5e38a13be895" target="p_4"/>
+      <arc id="22449934922560" source="p_3" target="cd40896b-4762-40a7-935f-34332052193d"/>
+      <arc id="22449934922752" source="cd40896b-4762-40a7-935f-34332052193d" target="p_4"/>
+      <arc id="22449934810416" source="source" target="tau_1"/>
+      <arc id="22449934922032" source="p_4" target="tau_2"/>
+      <arc id="22449934922128" source="tau_2" target="sink"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

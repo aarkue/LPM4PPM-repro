@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="imdf_net_1688939029.429436" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>imdf_net_1688939029.429436</text>
+    </name>
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="p_4">
+        <name>
+          <text>p_4</text>
+        </name>
+      </place>
+      <place id="p_3">
+        <name>
+          <text>p_3</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <transition id="tau_1">
+        <name>
+          <text>tau_1</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="698c0a8c-75d8-48e6-ae75-a1325f7c92dd"/>
+      </transition>
+      <transition id="e0e565e2-96cf-45fd-8aac-5938a76d14c9">
+        <name>
+          <text>AC355401</text>
+        </name>
+      </transition>
+      <transition id="4457ca50-fd33-45d5-a26b-2d5753c41cc5">
+        <name>
+          <text>386001Z</text>
+        </name>
+      </transition>
+      <transition id="tau_2">
+        <name>
+          <text>tau_2</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="7a07adda-e209-4fe8-a21d-997134059ef2"/>
+      </transition>
+      <arc id="23217738656928" source="source" target="tau_1"/>
+      <arc id="23217738653952" source="p_4" target="tau_2"/>
+      <arc id="23217738631776" source="e0e565e2-96cf-45fd-8aac-5938a76d14c9" target="p_4"/>
+      <arc id="23217738629760" source="4457ca50-fd33-45d5-a26b-2d5753c41cc5" target="p_4"/>
+      <arc id="23217738655248" source="tau_1" target="p_3"/>
+      <arc id="23217738653808" source="tau_2" target="sink"/>
+      <arc id="23217738632688" source="p_3" target="e0e565e2-96cf-45fd-8aac-5938a76d14c9"/>
+      <arc id="23217738631056" source="p_3" target="4457ca50-fd33-45d5-a26b-2d5753c41cc5"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

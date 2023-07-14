@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="imdf_net_1688939026.885699" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>imdf_net_1688939026.885699</text>
+    </name>
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="p_3">
+        <name>
+          <text>p_3</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <transition id="4d48eaa4-6a07-4368-a177-b3f84de9ac13">
+        <name>
+          <text>AC370606</text>
+        </name>
+      </transition>
+      <transition id="db38514e-f439-471f-95c4-8d6b98dbd0ab">
+        <name>
+          <text>AC372417</text>
+        </name>
+      </transition>
+      <arc id="23217705540000" source="source" target="4d48eaa4-6a07-4368-a177-b3f84de9ac13"/>
+      <arc id="23217705568912" source="db38514e-f439-471f-95c4-8d6b98dbd0ab" target="sink"/>
+      <arc id="23217705566896" source="p_3" target="db38514e-f439-471f-95c4-8d6b98dbd0ab"/>
+      <arc id="23217705566416" source="4d48eaa4-6a07-4368-a177-b3f84de9ac13" target="p_3"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>
